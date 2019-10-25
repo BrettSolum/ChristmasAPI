@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ChristmasAPI</name>
+    </assembly>
+    <members>
+        <member name="M:ChristmasAPI.Controllers.FamiliesController.GetFamilies">
+            <summary>
+            Get a list of all families
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ChristmasAPI.Controllers.FamiliesController.GetFamily(System.Int32)">
+            <summary>
+            Get a family by id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ChristmasAPI.Controllers.FamiliesController.CreateFamily(System.String)">
+            <summary>
+            Create a new family
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ChristmasAPI.Controllers.FamiliesController.DeleteFamily(System.Int32)">
+            <summary>
+            Delete a Family
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ChristmasAPI.Controllers.UsersController.GetUsers">
+            <summary>
+            Get a list of all users
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ChristmasAPI.Controllers.UsersController.GetUser(System.Int32)">
+            <summary>
+            Get a user by id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ChristmasAPI.Controllers.UsersController.CreateUser(System.Int32,ChristmasAPI.Models.User)">
+            <summary>
+            Create a new user
+            </summary>
+            <param name="familyId"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ChristmasAPI.Controllers.UsersController.UpdateUserSpouse(System.Int32,System.Int32)">
+            <summary>
+            Update user spouse
+            </summary>
+            <param name="id"></param>
+            <param name="spouseId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ChristmasAPI.Controllers.UsersController.UpdateUserExchange(System.Int32,System.Int32)">
+            <summary>
+            Update user exchange
+            </summary>
+            <param name="id"></param>
+            <param name="exchangeId"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
