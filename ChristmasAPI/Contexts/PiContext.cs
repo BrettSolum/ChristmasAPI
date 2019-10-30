@@ -19,6 +19,17 @@ namespace ChristmasAPI.Contexts {
             {
                 entityType.Relational().TableName = entityType.Name;
             }
+
+//            modelBuilder.Entity<User>()
+//                .HasOne(e => e.Spouse)
+//                .WithOne(e => e.Spouse)
+//                .OnDelete(DeleteBehavior.Restrict);
+//            
+//            modelBuilder.Entity<User>()
+//                .HasOne(e => e.ExchangeUser)
+//                .WithOne(e => e.ExchangeUser)
+//                .OnDelete(DeleteBehavior.Restrict);
+
         }
     }
 }

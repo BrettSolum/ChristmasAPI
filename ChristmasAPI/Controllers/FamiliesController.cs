@@ -58,8 +58,10 @@ namespace ChristmasAPI.Controllers
         {
             var usersToReturn = _context.Users
                 .AsNoTracking()
-                .Where(u => u.Family == id);
-            
+                .Where(u => u.FamilyId == id);
+                //.Include(u => u.Spouse)
+                //.Include(u => u.ExchangeUser);
+
 
             if (usersToReturn.Count() <= 0)
             {

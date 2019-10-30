@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.Transactions;
 
 namespace ChristmasAPI.Models {
     public class User {
@@ -6,19 +7,22 @@ namespace ChristmasAPI.Models {
         [Required]
         public int Id { get; set; }
 
-        [Required]
+        [Required, MaxLength(100)]
         public string First { get; set; }
         
-        [Required]
+        [Required, MaxLength(200)]
         public string Last { get; set; }
         
+        public int? SpouseId { get; set; }
+
+        //public User Spouse { get; set; }
+
         [Required]
-        public int SpouseId { get; set; }
-        
-        [Required]
-        public int Family { get; set; }
-        
-        [Required]
-        public int Exchange { get; set; }
+        public int FamilyId { get; set; }
+
+        //public Family Family { get; set; }
+        public int? ExchangeUserId { get; set; }
+
+        //public User ExchangeUser { get; set; }
     }
 }

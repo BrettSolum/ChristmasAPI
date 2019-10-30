@@ -76,7 +76,7 @@ namespace ChristmasAPI.Controllers
                 First = user.First,
                 Last = user.Last,
                 SpouseId = user.SpouseId,
-                Family = family.Id
+                FamilyId = family.Id
             };
 
             _context.Users.Add(finalUser);
@@ -137,7 +137,7 @@ namespace ChristmasAPI.Controllers
                 return NotFound("Exchange user does not exist");
             }
 
-            userToUpdate.Exchange = exchange.Id;
+            userToUpdate.ExchangeUserId = exchange.Id;
             _context.SaveChanges();
 
             return NoContent();
