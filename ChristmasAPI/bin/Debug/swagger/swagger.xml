@@ -17,6 +17,13 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="M:ChristmasAPI.Controllers.FamiliesController.GetFamilyUsers(System.Int32)">
+            <summary>
+            Get a list of users by family
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
         <member name="M:ChristmasAPI.Controllers.FamiliesController.CreateFamily(System.String)">
             <summary>
             Create a new family

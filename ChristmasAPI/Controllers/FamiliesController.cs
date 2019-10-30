@@ -3,6 +3,7 @@ using System.Security.Permissions;
 using ChristmasAPI.Contexts;
 using ChristmasAPI.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Xml;
 #pragma warning disable 1591
 
@@ -45,6 +46,27 @@ namespace ChristmasAPI.Controllers
             }
 
             return Ok(familyToReturn);
+        }
+
+        /// <summary>
+        /// Get a list of users by family
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpGet("{id}/Users")]
+        public IActionResult GetFamilyUsers(int id)
+        {
+            var usersToReturn = _context.Users
+                .AsNoTracking()
+                .Where(u => u.Family == id);
+            
+
+            if (usersToReturn.Count() <= 0)
+            {
+                return NotFound();
+            }
+
+            return Ok(usersToReturn);
         }
 
         /// <summary>
