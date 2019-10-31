@@ -75,7 +75,6 @@ namespace ChristmasAPI.Controllers
             {
                 First = user.First,
                 Last = user.Last,
-                SpouseId = user.SpouseId,
                 FamilyId = family.Id
             };
 
