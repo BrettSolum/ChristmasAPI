@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using System.Security.Permissions;
 using ChristmasAPI.Contexts;
@@ -58,12 +59,12 @@ namespace ChristmasAPI.Controllers
         {
             var usersToReturn = _context.Users
                 .AsNoTracking()
-                .Where(u => u.FamilyId == id);
-                //.Include(u => u.Spouse)
-                //.Include(u => u.ExchangeUser);
+                .Where(u => u.FamilyId == id)
+                .Include(u => u.Spouse)
+                .Include(u => u.ExchangeUser);
 
 
-            if (usersToReturn.Count() <= 0)
+            if (usersToReturn.Any())
             {
                 return NotFound();
             }

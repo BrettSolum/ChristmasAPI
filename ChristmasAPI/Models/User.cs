@@ -15,14 +15,14 @@ namespace ChristmasAPI.Models {
         
         public int? SpouseId { get; set; }
 
-        //public User Spouse { get; set; }
+        public User Spouse { get; set; }
 
         [Required]
         public int FamilyId { get; set; }
 
-        //public Family Family { get; set; }
+        public Family Family { get; set; }
         public int? ExchangeUserId { get; set; }
 
-        //public User ExchangeUser { get; set; }
+        public User ExchangeUser { get; set; }
     }
 }

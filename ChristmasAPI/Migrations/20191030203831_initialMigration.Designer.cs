@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ChristmasAPI.Migrations
 {
     [DbContext(typeof(PiContext))]
-    [Migration("20191030183842_AddUserCorrelations")]
-    partial class AddUserCorrelations
+    [Migration("20191030203831_initialMigration")]
+    partial class initialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -28,7 +28,7 @@ namespace ChristmasAPI.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ChristmasAPI.Models.Family");
+                    b.ToTable("Family");
                 });
 
             modelBuilder.Entity("ChristmasAPI.Models.User", b =>
@@ -52,7 +52,33 @@ namespace ChristmasAPI.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ChristmasAPI.Models.User");
+                    b.HasIndex("ExchangeUserId")
+                        .IsUnique();
+
+                    b.HasIndex("FamilyId");
+
+                    b.HasIndex("SpouseId")
+                        .IsUnique();
+
+                    b.ToTable("User");
+                });
+
+            modelBuilder.Entity("ChristmasAPI.Models.User", b =>
+                {
+                    b.HasOne("ChristmasAPI.Models.User", "ExchangeUser")
+                        .WithOne()
+                        .HasForeignKey("ChristmasAPI.Models.User", "ExchangeUserId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("ChristmasAPI.Models.Family", "Family")
+                        .WithMany()
+                        .HasForeignKey("FamilyId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("ChristmasAPI.Models.User", "Spouse")
+                        .WithOne()
+                        .HasForeignKey("ChristmasAPI.Models.User", "SpouseId")
+                        .OnDelete(DeleteBehavior.Restrict);
                 });
 #pragma warning restore 612, 618
         }

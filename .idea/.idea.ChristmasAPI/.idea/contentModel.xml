@@ -18,12 +18,8 @@
           <e p="UsersController.cs" t="Include" />
         </e>
         <e p="Migrations" t="Include">
-          <e p="20190920183911_initial.cs" t="Include" />
-          <e p="20190920183911_initial.Designer.cs" t="Include" />
-          <e p="20190920184748_singularTableName.cs" t="Include" />
-          <e p="20190920184748_singularTableName.Designer.cs" t="Include" />
-          <e p="20191030183842_AddUserCorrelations.cs" t="Include" />
-          <e p="20191030183842_AddUserCorrelations.Designer.cs" t="Include" />
+          <e p="20191030203831_initialMigration.cs" t="Include" />
+          <e p="20191030203831_initialMigration.Designer.cs" t="Include" />
           <e p="PiContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
