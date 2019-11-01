@@ -108,6 +108,7 @@ namespace ChristmasAPI.Controllers
             }
 
             userToUpdate.SpouseId = spouse.Id;
+            userToUpdate.SpouseName = spouse.First + ' ' + spouse.Last;
             _context.SaveChanges();
 
             return NoContent();
@@ -137,6 +138,7 @@ namespace ChristmasAPI.Controllers
             }
 
             userToUpdate.ExchangeUserId = exchange.Id;
+            userToUpdate.ExchangeUserName = exchange.First + ' ' + exchange.Last;
             _context.SaveChanges();
 
             return NoContent();

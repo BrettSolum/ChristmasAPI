@@ -17,11 +17,7 @@
           <e p="FamiliesController.cs" t="Include" />
           <e p="UsersController.cs" t="Include" />
         </e>
-        <e p="Migrations" t="Include">
-          <e p="20191030203831_initialMigration.cs" t="Include" />
-          <e p="20191030203831_initialMigration.Designer.cs" t="Include" />
-          <e p="PiContextModelSnapshot.cs" t="Include" />
-        </e>
+        <e p="Migrations" t="Include" />
         <e p="Models" t="Include">
           <e p="Family.cs" t="Include" />
           <e p="User.cs" t="Include" />
